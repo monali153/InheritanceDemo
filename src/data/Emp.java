@@ -8,6 +8,16 @@ public class Emp {
     private double salary;
     private NewAddress address;
 
+
+    public Emp(String name, String dob, int age, double salary, NewAddress address) {
+        this.name = name;
+        this.dob = dob;
+        this.age = age;
+        this.salary = salary;
+        this.address = address;
+    }
+
+    
     public String getName() {
         return name;
     }
