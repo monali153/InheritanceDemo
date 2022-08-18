@@ -5,17 +5,10 @@ import data.NewAddress;
 
 public class Implementation {
     public static void main(String[] args) {
-
-        Manager object = new Manager();
-
-        object.setName("Monali");
-        object.setAge(25);
-        object.setDob("15/05/1994");
-        object.setSalary(50000);
-        object.setTeamSize(10);
-        object.setTeamRatings(5);
-
         NewAddress address = new NewAddress();
+
+        Manager object = new Manager("Monali", "15/05/1997", 25, 500000, address, 10, 5);
+
 
         address.setHouseNo(122);
         address.setStreetName("ubale nagar");
@@ -26,6 +19,7 @@ public class Implementation {
         object.setAddress(address);
 
         object.show();
+        // object.calculateIncrement()
 
 
     }

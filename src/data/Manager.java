@@ -11,11 +11,13 @@ public class Manager extends Emp {
         this.teamRatings = teamRatings;
     }
 
-
-    public double calculateIncrement() {
+    @Override
+    public double calculateIncrement(float hikePercentage) {
         double response = 0;
         if (getTeamRatings() > 8) {
             response = (getSalary() * 12.5) / 100;
+        } else {
+            response = (getSalary() * hikePercentage) / 100;
         }
 
         return response;

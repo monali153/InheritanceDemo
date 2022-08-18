@@ -13,10 +13,13 @@ public class RegionalHead extends Emp {
         this.reviewRatings = reviewRatings;
     }
 
-    public double calculateIncrement() {
+    @Override
+    public double calculateIncrement(float hikePercentage) {
         double response = 0;
         if (getRegionPerformance() > 8 && getReviewRatings() > 7) {
             response = (getSalary() * 10.5) / 100;
+        } else {
+            response = (getSalary() * hikePercentage) / 100;
         }
 
         return response;

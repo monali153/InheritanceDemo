@@ -1,6 +1,6 @@
 package data;
 
-public class Emp {
+public abstract class Emp {
 
     private String name;
     private String dob;
@@ -17,7 +17,8 @@ public class Emp {
         this.address = address;
     }
 
-    
+    public abstract double calculateIncrement(float hikePercentage);
+
     public String getName() {
         return name;
     }
